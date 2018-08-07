@@ -1,5 +1,5 @@
 
-#FoMo3D
+# FoMo3D
 
 ## 工具安装及启动
 ganache-cli
@@ -29,9 +29,9 @@ PlayerBook:
 https://etherscan.io/address/0x789C537cE585595596D3905f401235f5A85B11d7#code
 </pre>
 FoMo3Dlong(原版)
-<pre>
+
 https://etherscan.io/address/0xa62142888aba8370742be823c1782d17a0389da1#code
-</pre>
+
 为了方便，笔者这里使用精简版(原版需要进行合约拆分以及闭源合约的实现)
 
 ## 合约编译和部署
