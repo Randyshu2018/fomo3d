@@ -65,6 +65,9 @@ remix-ide配置
 2. 替换合约地址
 3. 修改provider地址
 
+## 项目启动
+直接npm run dev
+
 ## 常见问题及解答
 1. out of gas 、Exceeds block gas limit和oversized data
 <pre>
