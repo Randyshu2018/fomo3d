@@ -76406,7 +76406,6 @@ const Public = {
 	 */
 	checkNetwork: async fn => {
 		try {
-		    console.log("11"+Public.Bridges.Metamask);
 			if(!Public.Bridges.Metamask || !Public.Bridges.Metamask.signedIn) return false
 			return new Promise( (res, rej) => {
 				JUST.Bridges.Metamask.web3.version.getNetwork(function(r, e){
@@ -76510,14 +76509,14 @@ jQuery(fn => { ( async function(){
 				API: "http://127.0.0.1:8545"
 			}, {
 				name: "Websocket",
-				API: new w3Constructor( new w3Constructor.providers.WebsocketProvider("wss://mainnet.infura.io/_ws"))
+				API: new w3Constructor( new w3Constructor.providers.WebsocketProvider("ws://localhost:8545"))
 			}
 		],
 		contracts: [
             {
                 name: "Fomo3D",
                 model: Ethereum.Fomo3D,
-                address: "0x71dfb1161259a44ca95426776d52762fe044cbb5"
+                address: "0xe01108f93198a41d87926faf043e7218b6d94273"
             },
 		]
 	})
@@ -76634,7 +76633,7 @@ jQuery(fn => { ( async function(){
 
 		// get airdrop information
 		JUST.Cache.airdropTracker = BN(await JUST.Bridges.Browser.contracts.Fomo3D.read("airDropTracker_")).div(10)
-		JUST.Cache.airdropPot = BN(((await JUST.Bridges.Browser.contracts.Fomo3D.read("getCurrentRoundInfo"))[3]).slice(0,-3)).div(1e18).toFixed(2)
+		JUST.Cache.airdropPot = BN(((await JUST.Bridges.Browser.contracts.Fomo3D.read("getCurrentRoundInfo"))[13]).slice(0,-3)).div(1e18).toFixed(2)
 
 		// get fiat info
 		JUST.Cache.fiatRatios = await jQuery.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR")
