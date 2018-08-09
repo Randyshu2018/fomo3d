@@ -55,6 +55,7 @@ remix-ide配置
 }
 </pre>
 ==注意== _gameAddress不能以0x开头，所以这里改用去掉0x的FoMo3dWorld合约地址字符串
+
 2. 激活合约
 调用FoMo3DWorld的active方法
 
