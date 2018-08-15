@@ -44,7 +44,7 @@ remix-ide配置
 合约编译
 1. 首先编译PlayerBook合约
 2. 将FoMo3DWorld中的PlayerBookInterface的合约地址替换为PlayerBook合约地址
-3. 编译PlayerBook合约
+3. 编译FoMo3DWorld合约
 
 ## 游戏激活
 1. 首先调用PlayerBook合约下的addGame方法,形如:
@@ -54,9 +54,15 @@ remix-ide配置
 	"string _gameNameStr": "f3dw"
 }
 </pre>
-==注意== _gameAddress不能以0x开头，所以这里改用去掉0x的FoMo3dWorld合约地址字符串
+==注意== 
+
+_gameAddress不能以0x开头，所以这里改用去掉0x的FoMo3dWorld合约地址字符串.
+
+调用的时候适度增加gas可以提高成功率哟.
+
 
 2. 激活合约
+
 调用FoMo3DWorld的active方法
 
 到这里我们的合约就部署完成了
